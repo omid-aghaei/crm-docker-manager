@@ -1,0 +1,23 @@
+@import "icons.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main { max-height: calc(100vh - 150px); }
+
+.main_loading_grad {
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, blue 20%, red 50%, blue 80%);
+  background-size: 1000px 640px;
+  position: relative;
+}
+@keyframes placeHolderShimmer{
+  0%{ background-position: -500px 0 }
+  100%{ background-position: 500px 0 }
+}
